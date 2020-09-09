@@ -9,6 +9,11 @@ create table hairimage
 hairfile varchar2(50),
 subject varchar2(50));
 
+alter table hairimage
+rename to hairshopimage;
+
+commit;
+
 create table shophairinfo
 (shophairnum varchar2(20) primary key,
 shop_code varchar2(20),
@@ -21,6 +26,11 @@ hairname varchar2(30),
 price varchar2(20),
 time varchar2(20),
 shopnum varchar2(20));
+
+commit;
+
+alter table shophairinfo
+rename to hairshopinfo;
 
 commit;
 
