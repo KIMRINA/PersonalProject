@@ -38,8 +38,13 @@ function inputCheck() {
 </script>
 </head>
 <body>
-<form method="post" name="frm" id="frm" action="${pageContext.request.contextPath}/categoryInsert.do" onsubmit="return inputCheck()">
+<form method="post" name="frm" id="frm" action="categoryInsert.do" onsubmit="return inputCheck()">
 	<h3 class="page_title">분류등록</h3>
+		<div>
+			<label for="code">코드입력</label>
+  			<input type="text" id="code" name="code">
+  			<br>
+  		</div>
 		<div>
 			<label for="maincategory">대분류</label>
   			<select id="maincategory" name="maincategory">
@@ -63,14 +68,11 @@ function inputCheck() {
   		</div>
   		<div>
 			<label for="subclass">소분류</label>
-  			<select id="subclass" name="subclass">
-  			<option value="">선택</option>
-    		<option value="short">숏</option>
-    		<option value="bobbed">단발</option>
-    		<option value="medium">미디엄</option>
-    		<option value="long">롱</option>
-  			</select>
+  			<input type="text" id="subclass" name="subclass">
   			<br>
+  		</div>
+  		<div>
+  			<button>입력</button>
   		</div>
 </form>
 </body>
