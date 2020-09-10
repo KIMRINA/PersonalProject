@@ -7,6 +7,7 @@
 <title>categorySelect.jsp</title>
 </head>
 <body>
+<%@include file="/common/header.jsp" %>
 	<h3 class="page_title">카테고리 조회</h3>
 	<div><span class="label">code</span><span>1</span></div>
 	<div><span class="label">maincategory</span><span>김린아</span></div>

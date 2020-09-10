@@ -38,6 +38,7 @@ function inputCheck() {
 </script>
 </head>
 <body>
+<%@include file="/common/header.jsp" %>
 <form method="post" name="frm" id="frm" action="categoryInsert.do" onsubmit="return inputCheck()">
 	<h3 class="page_title">분류등록</h3>
 		<div>
@@ -59,16 +60,10 @@ function inputCheck() {
 			<label for="middlecategory">중분류</label>
   			<select id="middlecategory" name="middlecategory">
   			<option value="">선택</option>
-    		<option value="short">숏</option>
-    		<option value="bobbed">단발</option>
-    		<option value="medium">미디엄</option>
-    		<option value="long">롱</option>
+    		<option value="cutmiddle">숏</option>
+    		<option value="dyeingmiddle">단발</option>
+    		<option value="permmiddle">미디엄</option>
   			</select>
-  			<br>
-  		</div>
-  		<div>
-			<label for="subclass">소분류</label>
-  			<input type="text" id="subclass" name="subclass">
   			<br>
   		</div>
   		<div>

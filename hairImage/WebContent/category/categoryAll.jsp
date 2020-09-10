@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="/common/header.jsp" %>
 <h3 class="page_title">카테고리 전체조회</h3>
 <ul class="search">
 	<li>제목</li>
@@ -21,7 +22,6 @@
     <th>code</th>
     <th>maincategory</th>
     <th>middlecategory</th>
-    <th>subclass</th>
   </tr>
 </thead>
   <tbody>
@@ -33,7 +33,6 @@
     <td><a href="boardSelect.jsp"><%=category.getCode()%></a></td>
     <td><%=category.getMaincategory()%></td>
     <td><%=category.getMiddlecategory()%></td>
-    <td><%=category.getSubclass()%></td>
   </tr>
   <% } %>
   </tbody>

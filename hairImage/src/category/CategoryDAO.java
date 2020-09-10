@@ -30,7 +30,6 @@ public class CategoryDAO {
 				resultVO.setCode(rs.getString(1)); // 컬럼이 첫번째 자리라서 1을 입력한거임
 				resultVO.setMaincategory(rs.getString("maincategory"));
 				resultVO.setMiddlecategory(rs.getString("middlecategory")); // 컬럼명에다가 별칭있으면 별칭을 넣어줘야함
-				resultVO.setSubclass(rs.getString("subclass")); // 대소문자 구별 없음
 			} else {
 				System.out.println("no data");
 			}
@@ -59,7 +58,6 @@ public class CategoryDAO {
 				category.setCode(rs.getString(1)); // 컬럼이 첫번째 자리라서 1을 입력한거임
 				category.setMaincategory(rs.getString("maincategory"));
 				category.setMiddlecategory(rs.getString("middlecategory")); // 컬럼명에다가 별칭있으면 별칭을 넣어줘야함
-				category.setSubclass(rs.getString("subclass")); // 대소문자 구별 없음
 				list.add(category); // resultVo를 list에 담음
 			}
 		} catch (Exception e) {
@@ -74,14 +72,13 @@ public class CategoryDAO {
 	public void update(CategoryVO categoryVO) {
 		try {
 			conn = ConnectionManager.getConnnect();
-			String sql = "update category set maincategory =?, middlecategory =?, subclass =? where code=?"; // 값 들어갈
+			String sql = "update category set maincategory =?, middlecategory =? where code=?"; // 값 들어갈
 																												// 자리에 ?
 																												// 로 지정
 			pstmt = conn.prepareStatement(sql); // 미리 sql 구문이 준비가 되어야한다
 			pstmt.setString(1, categoryVO.getMaincategory()); // ?의 첫번째 자리에 올 값 지정
 			pstmt.setString(2, categoryVO.getMiddlecategory());
-			pstmt.setString(3, categoryVO.getSubclass());
-			pstmt.setString(4, categoryVO.getCode());
+			pstmt.setString(3, categoryVO.getCode());
 			int r = pstmt.executeUpdate(); // 실행
 			System.out.println(r + " 건이 수정됨"); // 결과 처리
 
@@ -117,13 +114,12 @@ public class CategoryDAO {
 			Connection conn = ConnectionManager.getConnnect(); // ConnectionManager클래스의 getConnnect실행
 
 			// 2. sql 구문 실행
-			String sql = "insert into category(code,maincategory,middlecategory,subclass) values(?,?,?,?)";
+			String sql = "insert into category(code,maincategory,middlecategory) values(?,?,?)";
 
 			PreparedStatement psmt = conn.prepareStatement(sql);
 			psmt.setString(1, categoryVO.getCode());
 			psmt.setString(2, categoryVO.getMaincategory());
 			psmt.setString(3, categoryVO.getMiddlecategory());
-			psmt.setString(4, categoryVO.getSubclass());
 			psmt.executeUpdate();
 
 			// 3. 결과 처리

@@ -42,3 +42,9 @@ select * from category;
 update category
 set maincategory ='222', middlecategory ='222',subclass ='222'
 where code='111';
+
+alter table category
+drop column middlecategory;
+
+alter table category
+rename column subclass to middlecategory;
