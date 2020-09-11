@@ -56,9 +56,9 @@
 	<%@include file="/common/header.jsp"%>
 
 	<form method="post" name="frm" id="frm"
-		action="categoryHairViewServ.do">
+		action="categoryHairViewDeleteServ.do">
 		<input type="hidden" name="p" value="1">
-		<h3 class="page_title">헤어모아보기</h3>
+		<h3 class="page_title">헤어모아보기-삭제</h3>
 		<div>
 			<label for="maincategory">대분류</label> <select id="maincategory"
 				name="maincategory"
