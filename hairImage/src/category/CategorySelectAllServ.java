@@ -1,7 +1,9 @@
 package category;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/category/categorySelectAll.do")
-public class CategorySelectAll extends HttpServlet {
+public class CategorySelectAllServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -21,6 +23,7 @@ public class CategorySelectAll extends HttpServlet {
 		CategoryDAO dao = new CategoryDAO();
 		List<CategoryVO> list = dao.selectAll();
 
+		
 		// 결과 저장
 		request.setAttribute("list", list);
 		request.getRequestDispatcher("categoryAll.jsp").forward(request, response);

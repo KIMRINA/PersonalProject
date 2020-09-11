@@ -4,6 +4,6 @@
 
 <ul>
 	<li><a href="/hairImage/">홈</a>
-	<li><a href="/hairImage/category/categoryInsert.do">카테고리 등록</a>
-	<li><a href="<%=application.getContextPath()%>/category/categorySelectAll.do">카테고리 전체조회</a>
+	<li><a href="/hairImage/category/categoryInsert.do">헤어업로드</a>
+	<li><a href="<%=application.getContextPath()%>/category/categoryHairViewServ.do">헤어모아보기</a>
 </ul>

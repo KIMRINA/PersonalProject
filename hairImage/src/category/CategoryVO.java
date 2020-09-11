@@ -5,7 +5,26 @@ public class CategoryVO {
 	private String maincategory;
 	private String middlecategory;
 	private String subclass;
+	Integer first;
+	Integer last;
 	
+	
+	public Integer getFirst() {
+		return first;
+	}
+
+	public void setFirst(Integer first) {
+		this.first = first;
+	}
+
+	public Integer getLast() {
+		return last;
+	}
+
+	public void setLast(Integer last) {
+		this.last = last;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString();

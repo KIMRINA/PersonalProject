@@ -2,6 +2,8 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +12,13 @@
 </head>
 <body>
 <%@include file="/common/header.jsp" %>
+
+<%-- <c:forEach var="list" items="${allList}"> --%>
+<%-- 	<c:forEach var="element" items="${list.value}"> --%>
+<%-- 		(${list.key},  ${element }) <br> --%>
+<%-- 	</c:forEach> --%>
+<%-- </c:forEach> --%>
+
 <h3 class="page_title">카테고리 전체조회</h3>
 <ul class="search">
 	<li>제목</li>
