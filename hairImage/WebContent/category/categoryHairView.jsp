@@ -2,7 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="my" tagdir="/WEB-INF/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +56,6 @@
 
 	<form method="post" name="frm" id="frm"
 		action="categoryHairViewServ.do">
-		<input type="hidden" name="p" value="1">
 		<h3 class="page_title">헤어모아보기</h3>
 		<div>
 			<label for="maincategory">대분류</label> <select id="maincategory"
@@ -83,21 +81,19 @@
 	<table>
 		<tbody>
 			<c:forEach items="${list}" var="hairImage">
+				<div style="float: left;">
 				<img src="../images/${hairImage.filename}"
 					style="width: 200px; height: 400px; padding: 10px">
+				<form action="../category/hairDelete.do">
+					<input name="code" value="${hairdelete.code}" type="hidden">
+					<br><button>삭제</button>
+				</form>
+					    <button>수정</button>
+				</div>
+				
 			</c:forEach>
 		</tbody>
 	</table>
 
-	<my:paging paging="${paging}" jsfunc="gopage" />
-
-	<script>
-	function gopage(p) {			// 검색 function
-		frm.p.value = p;		// 페이지번호 받아와서 submit에 넘김
-		frm.submit();
-		
-		// location.href="deptSelectAll?p=" + p;	// 이동되는 주소가 달라서 여러사람이 쓰기위해서는 매개값 p로 해줌
-	}
-</script>
 </body>
 </html>

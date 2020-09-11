@@ -73,36 +73,6 @@ public class CategoryInsertServ extends HttpServlet {
 
 		response.sendRedirect("categoryHairViewServ.do");
 		
-		//board.setFilename(renameFile.getName());	// 그것을 board에 담기
-				
-				
-//		// 파라미터 VO에 담기
-//		CategoryVO category = new CategoryVO();
-//		
-//		try {  // 위의 파라미터 한꺼번에 담아주는거
-//			BeanUtils.copyProperties(category, request.getParameterMap());
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		
-//		System.out.println("============map============");
-//		Map<String,String[]> map = request.getParameterMap();
-//		System.out.println(map);
-//		System.out.println("code=" + map.get("code"));
-//		
-//		System.out.println("============names============");
-//		Enumeration<String> pnames = request.getParameterNames();  // 파라미터 이름만 읽어오기 가능
-//		while(pnames.hasMoreElements()) {
-//			System.out.println(pnames.nextElement());
-//		}
-//		
-//		// DB 등록 처리
-//		CategoryDAO dao = new CategoryDAO();
-//		dao.insert(category);
-//
-//		
-//		// 목록으로 이동
-//		response.sendRedirect("categorySelectAll.do");
 	}
 
 	private String getFileName(Part part) throws UnsupportedEncodingException {

@@ -31,28 +31,14 @@ public class CategoryHairViewServ extends HttpServlet {
 		String middlecategory = request.getParameter("middlecategory");
 		System.out.println("main: " + maincategory);
 		System.out.println("middle: " + middlecategory);
-		String p = request.getParameter("p");
-
-		// 유효성 체크
-		int page = 1;
-		if (p != null) {
-			page = Integer.parseInt(p); // p가 널이 아니라면 p를 인트로 변환후 page에 담기
-		}
-		Paging paging = new Paging();
-		paging.setPageUnit(5); // 한페이지에 출력할 레코드 건수 설정
-		paging.setPageSize(3); // 페이지 번호 수 설정
-		paging.setPage(page); // paging 반영되게 해주기
 
 		// 저장해둔 변수를 cateVO에 담아서 DAO에게 전달함.
 		CategoryVO cateVO = new CategoryVO();
-		CategoryDAO cateDAO = new CategoryDAO();
 		cateVO.setMaincategory(maincategory);
 		cateVO.setMiddlecategory(middlecategory);
-		paging.setTotalRecord(cateDAO.count(cateVO));
-		cateVO.setFirst(paging.getFirst());	// first를 dept에 담음
-		cateVO.setLast(paging.getLast());		// last를 dept에 담음
 
 		// DAO 에서는 cateVO에 담긴 main, middle category정보를 토대로 cate_code를 추출함.
+		CategoryDAO cateDAO = new CategoryDAO();
 		CategoryVO resultCateVO = cateDAO.selectOne(cateVO);
 
 		// 추출된 cate_code를 hairVO에 담아서, hairDAO에 전달해줌.
@@ -64,7 +50,6 @@ public class CategoryHairViewServ extends HttpServlet {
 		ArrayList<HairImageVO> listHairVO = dao.selectCategoryHairImage(hairVO);
 
 		request.setAttribute("list", listHairVO);
-		request.setAttribute("paging", paging);
 		request.getRequestDispatcher("categoryHairView.jsp").forward(request, response);
 	}
 
