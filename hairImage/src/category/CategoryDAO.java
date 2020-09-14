@@ -17,7 +17,40 @@ public class CategoryDAO {
 	Connection conn;
 	PreparedStatement pstmt; // PreparedStatement는 Statement와 같은 기능을 수행하지만 가독성이 좋고 더 빠르다. ?기호 사용가능
 	ResultSet rs = null; // ResultSet은 결과의 집합이라 select할때 사용하기. 초기값 필요하다
+	
+	
+	// 단건 조회
+	public CategoryVO selectTwo(CategoryVO categoryVO) {
+		CategoryVO resultVO = null; // select할때는 리턴값이 필요해서 리턴값을 저장할 변수 선언
 
+		try {
+			conn = ConnectionManager.getConnnect();
+			// code 추출
+			String sql = "SELECT code,maincategory,middlecategory FROM category2 WHERE code = ? ";
+			pstmt = conn.prepareStatement(sql);
+			System.out.println("dd"+categoryVO.getCode());
+			pstmt.setString(1, categoryVO.getCode());
+			rs = pstmt.executeQuery();
+
+			// 카테고리에 해당하는 코드값이 존재한다면
+			if (rs.next()) {
+				resultVO = new CategoryVO();
+				resultVO.setCode(rs.getString("code"));
+				resultVO.setMaincategory(rs.getString("maincategory"));
+				resultVO.setMiddlecategory(rs.getString("middlecategory"));
+				System.out.println("main"+resultVO.getMaincategory());
+			} else {
+				System.out.println("!!!!");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ConnectionManager.close(rs, pstmt, conn);
+		}
+		return resultVO; // 값을 리턴해줌
+	}
+
+	
 	// 코드 단건 조회
 	public CategoryVO selectOne(CategoryVO categoryVO) {
 		CategoryVO resultVO = null; // select할때는 리턴값이 필요해서 리턴값을 저장할 변수 선언

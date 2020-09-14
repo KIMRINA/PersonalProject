@@ -88,12 +88,11 @@
 					<input name="code" value="${hairImage.code}" type="hidden">
 					<br><button>삭제</button>
 				</form>
-				<form  method="post" action="../category/hairUpdate.do">
-					<input name="hairup" value="${hairImage.hairup}" type="hidden">
+				<form  method="get" action="../category/hairUpdate.do">
+					<input name="code" value="${hairImage.code}" type="hidden"> <%-- 빈 유틸쓸때 이름 같게 해줘야됨 --%>
 					<button>수정</button>
 				</form>
 				</div>
-				
 			</c:forEach>
 		</tbody>
 	</table>

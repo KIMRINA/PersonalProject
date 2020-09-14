@@ -73,17 +73,17 @@ function changeFunc(val){
 <%@include file="/common/header.jsp" %>
 
 <form method="post" name="frm" id="frm" action="categoryUpdate.do" onsubmit="return inputCheck()" enctype="multipart/form-data">
-	<h3 class="page_title">헤어업로드</h3>
+	<h3 class="page_title">헤어업로드 수정</h3>
 		<div>
 			<label for="maincategory">대분류</label>
   			<select id="maincategory" name="maincategory" onchange="changeFunc(this.options[this.selectedIndex].value)">
   			<option value="">선택</option>
     		<option value="cut"
-    		<c:if test="${hairup.maincategory='cut'}">selected="selected"</c:if>>커트</option>
+    		<c:if test="${hairup.maincategory=='cut'}">selected="selected"</c:if>>커트</option>
     		<option value="dyeing"
-    		<c:if test="${hairup.maincategory='dyeing'}">selected="selected"</c:if>>염색</option>
+    		<c:if test="${hairup.maincategory=='dyeing'}">selected="selected"</c:if>>염색</option>
     		<option value="perm"
-    		<c:if test="${hairup.maincategory='perm'}">selected="selected"</c:if>>펌</option>
+    		<c:if test="${hairup.maincategory=='perm'}">selected="selected"</c:if>>펌</option>
   			</select>
   			<br>
   		</div>
@@ -91,6 +91,12 @@ function changeFunc(val){
 			<label for="middlecategory">중분류</label>
   			<select id="middlecategory" name="middlecategory">
   			<option value="middlecategory">선택</option>
+  			<option value="cut"
+  			<c:if test="${hairup.middlecategory=='cut'}">selected="selected"</c:if>></option>
+  			<option value="dyeing"
+  			<c:if test="${hairup.middlecategory=='cut'}">selected="selected"</c:if>></option>
+  			<option value="perm"
+  			<c:if test="${hairup.middlecategory=='cut'}">selected="selected"</c:if>></option>
   			</select>
   			<br>
   		</div>
@@ -98,7 +104,7 @@ function changeFunc(val){
   			<input type="file" name="filename" accept=".gif, .jpg, .png">
   		</div>
   		<div>
-  			<button>입력</button>
+  			<button>수정</button>
   		</div>
 </form>
 
