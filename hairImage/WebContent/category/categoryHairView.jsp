@@ -84,11 +84,14 @@
 				<div style="float: left;">
 				<img src="../images/${hairImage.filename}"
 					style="width: 200px; height: 400px; padding: 10px">
-				<form action="../category/hairDelete.do">
-					<input name="code" value="${hairdelete.code}" type="hidden">
+				<form  method="post" action="../category/hairDelete.do">
+					<input name="code" value="${hairImage.code}" type="hidden">
 					<br><button>삭제</button>
 				</form>
-					    <button>수정</button>
+				<form  method="post" action="../category/hairUpdate.do">
+					<input name="hairup" value="${hairImage.hairup}" type="hidden">
+					<button>수정</button>
+				</form>
 				</div>
 				
 			</c:forEach>

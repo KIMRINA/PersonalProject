@@ -26,10 +26,11 @@ public class CategoryHairDeleteServ extends HttpServlet {
 
 		// 파라미터 변수에 저장
 		String code = request.getParameter("code");
-
+		System.out.println("삭제되는코드"+code);
+		
 		// VO에 담기
 		HairImageVO hairVO = new HairImageVO();
-		hairVO.setFilename(code);
+		hairVO.setCode(code);
 
 		// 서비스
 		HairImageDAO hairDAO = new HairImageDAO();

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.beanutils.BeanUtils;
 
-@WebServlet("/category/categoryUpdate.do")
+@WebServlet("/category/hairUpdate.do")
 public class CategoryHairUpdateServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
