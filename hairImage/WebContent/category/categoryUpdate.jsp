@@ -63,6 +63,7 @@ function changeFunc(val){
 		var option = $("<option>"+changeItem[count]+"</option>");
 	    $('#middlecategory').append(option);
 	}
+	
 }
 
 </script>
@@ -90,13 +91,12 @@ function changeFunc(val){
   		<div>
 			<label for="middlecategory">중분류</label>
   			<select id="middlecategory" name="middlecategory">
-  			<option value="middlecategory">선택</option>
   			<option value="cut"
-  			<c:if test="${hairup.middlecategory=='cut'}">selected="selected"</c:if>></option>
+  			<c:if test="${hairup.maincategory=='cut'}">selected="selected"</c:if>>${hairup.middlecategory}</option>
   			<option value="dyeing"
-  			<c:if test="${hairup.middlecategory=='cut'}">selected="selected"</c:if>></option>
+  			<c:if test="${hairup.maincategory=='dyeing'}">selected="selected"</c:if>>${hairup.middlecategory}</option>
   			<option value="perm"
-  			<c:if test="${hairup.middlecategory=='cut'}">selected="selected"</c:if>></option>
+  			<c:if test="${hairup.maincategory=='perm'}">selected="selected"</c:if>>${hairup.middlecategory}</option>
   			</select>
   			<br>
   		</div>
