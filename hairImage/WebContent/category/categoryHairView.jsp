@@ -12,7 +12,7 @@
 	display: inline-block;
 	border: 1px solid hotpink;
 }
-
+ 
 .pagination .active {
 	border: 1px solid gray;
 	background-color: pink;
