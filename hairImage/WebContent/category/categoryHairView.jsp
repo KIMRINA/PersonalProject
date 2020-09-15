@@ -2,11 +2,10 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html><html><head>
 <meta charset="UTF-8">
 <title>categoryHairView.jsp</title>
+<link href="../css/select.css" rel="stylesheet" />
 <style>
 .pagination li {
 	display: inline-block;
@@ -56,7 +55,7 @@
 
 	<form method="post" name="frm" id="frm"
 		action="categoryHairViewServ.do">
-		<h3 class="page_title">헤어모아보기</h3>
+		<br><h3 class="page_title">헤어모아보기</h3><br>
 		<div>
 			<label for="maincategory">대분류</label> 
 			<select id="maincategory"
@@ -73,10 +72,10 @@
 			<select id="middlecategory"
 				name="middlecategory">
 				<option value="">선택</option>
-			</select> <br>
+			</select><br>
 		</div>
 		<div>
-			<button>검색</button>
+			<br><button>검색</button>
 		</div>
 	</form>
 

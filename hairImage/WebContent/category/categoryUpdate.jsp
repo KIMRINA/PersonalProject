@@ -74,7 +74,7 @@ function changeFunc(val){
 <%@include file="/common/header.jsp" %>
 
 <form method="post" name="frm" id="frm" action="hairUpdate.do" onsubmit="return inputCheck()" enctype="multipart/form-data">
-	<h3 class="page_title">헤어업로드 수정</h3>
+	<br><h3 class="page_title">헤어업로드 수정</h3><br>
 		<div>
 			<label for="maincategory">대분류</label>
   			<select id="maincategory" name="maincategory" onchange="changeFunc(this.options[this.selectedIndex].value)">
@@ -104,7 +104,7 @@ function changeFunc(val){
   			<input type="file" name="filename" accept=".gif, .jpg, .png">
   		</div>
   		<div>
-  			<button>수정</button>
+  			<br><button>수정</button>
   		</div>
 </form>
 

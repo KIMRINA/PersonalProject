@@ -30,8 +30,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#main">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<%=application.getContextPath()%>/category/categoryInsert.do">HAIRUPLOAD</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<%=application.getContextPath()%>/category/categoryHairViewServ.do">HAIRCollection</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hairupload">HAIRUPLOAD</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#haircollection">HAIRCollection</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
@@ -53,27 +53,29 @@
                     </div>
                     <div class="social-icons">
                         <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="#"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://github.com/KIMRINA"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Experience-->
-            <section class="resume-section" id="experience">
+            <section class="resume-section" id="hairupload">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
+                    <h2 class="mb-5">hairupload</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-						sdfsdf
+						<iframe src="<%=application.getContextPath()%>/category/categoryInsert.do" width="100%" height="500px">
+						</iframe>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Education-->
-            <section class="resume-section" id="education">
+            <section class="resume-section" id="haircollection">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
+                    <h2 class="mb-5">haircollection</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
+                    	<iframe src="<%=application.getContextPath()%>/category/categoryHairViewServ.do" width="100%" height="500px">
+						</iframe>
                     </div>
                 </div>
             </section>
