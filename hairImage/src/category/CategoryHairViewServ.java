@@ -40,7 +40,8 @@ public class CategoryHairViewServ extends HttpServlet {
 		// DAO 에서는 cateVO에 담긴 main, middle category정보를 토대로 cate_code를 추출함.
 		CategoryDAO cateDAO = new CategoryDAO();
 		CategoryVO resultCateVO = cateDAO.selectOne(cateVO);
-
+		System.out.println("cateCode" + resultCateVO.getCode());
+		
 		// 추출된 cate_code를 hairVO에 담아서, hairDAO에 전달해줌.
 		HairImageVO hairVO = new HairImageVO();
 		hairVO.setCate_code(resultCateVO.getCode());

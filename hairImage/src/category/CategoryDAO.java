@@ -26,7 +26,7 @@ public class CategoryDAO {
 		try {
 			conn = ConnectionManager.getConnnect();
 			// code 추출
-			String sql = "SELECT code,maincategory,middlecategory FROM category2 WHERE code = ? ";
+			String sql = "SELECT code, maincategory, middlecategory FROM category2 WHERE code = ? ";
 			pstmt = conn.prepareStatement(sql);
 			System.out.println("dd"+categoryVO.getCode());
 			pstmt.setString(1, categoryVO.getCode());

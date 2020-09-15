@@ -58,7 +58,8 @@
 		action="categoryHairViewServ.do">
 		<h3 class="page_title">헤어모아보기</h3>
 		<div>
-			<label for="maincategory">대분류</label> <select id="maincategory"
+			<label for="maincategory">대분류</label> 
+			<select id="maincategory"
 				name="maincategory"
 				onchange="changeFunc(this.options[this.selectedIndex].value)">
 				<option value="">선택</option>
@@ -68,7 +69,8 @@
 			</select> <br>
 		</div>
 		<div>
-			<label for="middlecategory">중분류</label> <select id="middlecategory"
+			<label for="middlecategory">중분류</label> 
+			<select id="middlecategory"
 				name="middlecategory">
 				<option value="">선택</option>
 			</select> <br>
@@ -90,6 +92,7 @@
 				</form>
 				<form  method="get" action="../category/hairUpdate.do">
 					<input name="code" value="${hairImage.code}" type="hidden"> <%-- 빈 유틸쓸때 이름 같게 해줘야됨 --%>
+					<input name="cate_code" value="${hairImage.cate_code}" type="hidden"> <%-- 빈 유틸쓸때 이름 같게 해줘야됨 --%>
 					<button>수정</button>
 				</form>
 				</div>

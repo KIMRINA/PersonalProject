@@ -73,7 +73,7 @@ function changeFunc(val){
 
 <%@include file="/common/header.jsp" %>
 
-<form method="post" name="frm" id="frm" action="categoryUpdate.do" onsubmit="return inputCheck()" enctype="multipart/form-data">
+<form method="post" name="frm" id="frm" action="hairUpdate.do" onsubmit="return inputCheck()" enctype="multipart/form-data">
 	<h3 class="page_title">헤어업로드 수정</h3>
 		<div>
 			<label for="maincategory">대분류</label>

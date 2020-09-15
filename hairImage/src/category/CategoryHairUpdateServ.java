@@ -16,13 +16,20 @@ public class CategoryHairUpdateServ extends HttpServlet {
 	// 수정페이지로 이동
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String code = request.getParameter("code");
+		String cate_code = request.getParameter("cate_code");
+		
+		System.out.println("code: " + code);
+		System.out.println("cate_code: " + code);
 		
 		CategoryVO cateVO = new CategoryVO();
-		cateVO.setCode(code);
+		cateVO.setCode(cate_code);
 		
 		CategoryDAO cateDAO = new CategoryDAO();
 		CategoryVO resultCateVO = cateDAO.selectTwo(cateVO);
+		
 		System.out.println("1"+resultCateVO.getMaincategory());
+		System.out.println("Main:::::::: " + resultCateVO.getMaincategory());
+		System.out.println("Middle:::::::: " + resultCateVO.getMiddlecategory());
 		request.setAttribute("hairup", resultCateVO);	// 담아서 보낸다
 		
 		request.getRequestDispatcher("categoryUpdate.jsp").forward(request, response);
