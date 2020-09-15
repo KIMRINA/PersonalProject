@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#main">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/hair2/category/categoryInsert.do">HAIRUPLOAD</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<%=application.getContextPath()%>/category/categoryInsert.do">HAIRUPLOAD</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<%=application.getContextPath()%>/category/categoryHairViewServ.do">HAIRCollection</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
