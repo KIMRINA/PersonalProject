@@ -32,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#main">HOME</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hairupload">HAIRUPLOAD</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#haircollection">HAIRCollection</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#music">music</a></li>
                 </ul>
             </div>
         </nav>
@@ -50,7 +50,7 @@
                         <br><a href="mailto:aem205@gmail.com">aem205@gmail.com</a>
                     </div>
                     <div class="social-icons">
-                        <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://www.instagram.com/kimjisu93"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/KIMRINA"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
@@ -80,9 +80,11 @@
             <hr class="m-0" />
             
             <!-- Skills-->
-            <section class="resume-section" id="skills">
+            <section class="resume-section" id="music">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Skills111</h2>
+                    <h2 class="mb-5">music</h2>
+                    <iframe src="<%=application.getContextPath()%>/category/music.jsp" width="800px" height="500px">
+                	</iframe>
                 </div>
             </section>
             <hr class="m-0" />
@@ -95,6 +97,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        
     </body>
 </html>
