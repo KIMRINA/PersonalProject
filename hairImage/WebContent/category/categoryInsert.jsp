@@ -5,7 +5,22 @@
 <!DOCTYPE html><html><head>
 <meta charset="UTF-8">
 <title>categoryInsert.jsp</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
 <style>
+.btn{
+  width:100%;
+  position:relative;
+  height:50px;
+}
+
+form {
+	font-family: 'Noto Serif KR', serif;
+}
+
+.page_title {
+	font-family: 'Noto Serif KR', serif;
+}
+
 .file-input-container{
   display:inline;
   margin:2px;
@@ -19,7 +34,7 @@
 }
 .for-sm-input-file{
      width: 90px;
-    height: 24px;
+    height: 45px;
     border: 1px solid darkorange;
     position: absolute;
     padding: 6px;
@@ -48,7 +63,7 @@
     border: 1px solid darkorange;
     border-radius: 2px;
     margin-left: 15px;
-    height: 16px;
+    height: 45px;
     font-family: consolas;
     background: rgba(241, 140, 22, 0.94);
     color: #fff;
@@ -119,11 +134,13 @@ function changeFunc(val){
 	}
 }
 
-
+function hfileName() {
 $('#sm-ip-1').on('change',function(event){
 	   var name = event.target.files[0].name;
+	   console.log(name);
 	   $('#file-name').text(name);
 	 })
+}
 </script>
 </head>
 <body>
@@ -153,14 +170,15 @@ $('#sm-ip-1').on('change',function(event){
   		<div>
   			<div style="">  <%--추가 --%>
 			<div class="file-input-container">	<%--추가 --%>
-  			<input type="file" name="filename" class="sm-input-file" id="sm-ip-1" accept=".gif, .jpg, .png">
+  			<input type="file" name="filename" class="sm-input-file" id="sm-ip-1" accept=".gif, .jpg, .png"
+  			onchange="hfileName()">
   			<label class="for-sm-input-file" for="sm-ip-1">Add File</label>	<%--추가 --%>
 			<span class="span-text" id="file-name"></span>	<%--추가 --%>
 			</div>	<%--추가 --%>
 			</div>	<%--추가 --%>
   		</div>
   		<div>
-  			<br><button>입력</button>
+  			<br><button class="btn btn-primary">입력</button>
   		</div>
 </form>
 

@@ -33,8 +33,6 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hairupload">HAIRUPLOAD</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#haircollection">HAIRCollection</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
                 </ul>
             </div>
         </nav>
@@ -63,7 +61,7 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">hairupload</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-						<iframe src="<%=application.getContextPath()%>/category/categoryInsert.do" width="100%" height="500px">
+						<iframe src="<%=application.getContextPath()%>/category/categoryInsert.do" width="990px" height="500px">
 						</iframe>
                     </div>
                 </div>
@@ -74,7 +72,7 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">haircollection</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    	<iframe src="<%=application.getContextPath()%>/category/categoryHairViewServ.do" width="100%" height="500px">
+                    	<iframe src="<%=application.getContextPath()%>/category/categoryHairViewServ.do" width="990px" height="500px">
 						</iframe>
                     </div>
                 </div>
@@ -88,27 +86,7 @@
                 </div>
             </section>
             <hr class="m-0" />
-            
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                </div>
-            </section>
-            <hr class="m-0" />
-            
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Google Analytics Certified Developer
-                        </li>
-                    </ul>
-                </div>
-            </section>
+
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

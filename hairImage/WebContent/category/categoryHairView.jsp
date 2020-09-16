@@ -6,7 +6,24 @@
 <meta charset="UTF-8">
 <title>categoryHairView.jsp</title>
 <link href="../css/select.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
 <style>
+.btn{
+  width:100%;
+  position:relative;
+  height:50px;
+}
+
+form {
+	font-family: 'Noto Serif KR', serif;
+}
+.page_title {
+	font-family: 'Noto Serif KR', serif;
+}
+button {
+	font-family: 'Noto Serif KR', serif;
+}
+
 .pagination li {
 	display: inline-block;
 	border: 1px solid hotpink;
@@ -75,7 +92,7 @@
 			</select><br>
 		</div>
 		<div>
-			<br><button>검색</button>
+			<br><button class="btn btn-primary">검색</button>
 		</div>
 	</form>
 

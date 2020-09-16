@@ -2,11 +2,80 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html><html><head>
 <meta charset="UTF-8">
 <title>categoryUpdate.jsp</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+<style>
+.btn{
+  width:100%;
+  position:relative;
+  height:50px;
+}
+
+form {
+	font-family: 'Noto Serif KR', serif;
+}
+
+.page_title {
+	font-family: 'Noto Serif KR', serif;
+}
+
+.file-input-container{
+  display:inline;
+  margin:2px;
+}
+.sm-input-file{
+    border: 1px solid #333;
+    background: #ccc;
+    color: #777;
+    width: 82px;
+    opacity:0;
+}
+.for-sm-input-file{
+     width: 90px;
+    height: 45px;
+    border: 1px solid darkorange;
+    position: absolute;
+    padding: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 30;
+    text-align: center;
+    font-family: consolas;
+    left:10px;
+    /* box-shadow: 0px 0px 2px darkorange; */
+    /* text-shadow:0px 0px 4px darkorange; */
+    color:darkorange;
+    padding-top:10px;
+        border-top-left-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 2px;
+}
+.for-sm-input-file:hover{
+  background:rgba(241, 160, 22, 0.74);
+  color:#fff;
+}
+.span-text{
+      display: inline-flex;
+    padding: 12px;
+    border: 1px solid darkorange;
+    border-radius: 2px;
+    margin-left: 15px;
+    height: 45px;
+    font-family: consolas;
+    background: rgba(241, 140, 22, 0.94);
+    color: #fff;
+    min-width: 100px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 0px;
+
+}
+</style>
+<link href="../css/select.css" rel="stylesheet" />
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
 <script>
 function inputCheck() {
@@ -66,6 +135,13 @@ function changeFunc(val){
 	
 }
 
+function hfileName() {
+$('#sm-ip-1').on('change',function(event){
+	   var name = event.target.files[0].name;
+	   console.log(name);
+	   $('#file-name').text(name);
+	 })
+}
 </script>
 </head>
 <body>
@@ -97,14 +173,11 @@ function changeFunc(val){
   			<c:if test="${hairup.maincategory=='dyeing'}">selected="selected"</c:if>>${hairup.middlecategory}</option>
   			<option value="perm"
   			<c:if test="${hairup.maincategory=='perm'}">selected="selected"</c:if>>${hairup.middlecategory}</option>
-  			</select>
+  			</select><br>
   			<br>
   		</div>
   		<div>
-  			<input type="file" name="filename" accept=".gif, .jpg, .png">
-  		</div>
-  		<div>
-  			<br><button>수정</button>
+  			<br><button class="btn btn-primary">수정</button>
   		</div>
 </form>
 

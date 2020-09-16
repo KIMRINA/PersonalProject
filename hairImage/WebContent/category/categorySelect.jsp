@@ -5,15 +5,20 @@
 <head>
 <meta charset="UTF-8">
 <title>categorySelect.jsp</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+<style>
+form {
+	font-family: 'Noto Serif KR', serif;
+}
+
+.page_title {
+	font-family: 'Noto Serif KR', serif;
+}
+</style>
 </head>
 <body>
 <%@include file="/common/header.jsp" %>
 	<h3 class="page_title">카테고리 조회</h3>
-	<div><span class="label">code</span><span>1</span></div>
-	<div><span class="label">maincategory</span><span>김린아</span></div>
-	<div><span class="label">middlecategory</span><span>제목뭐라할까</span></div>
-	<div><span class="label">subclass</span><span>응과제</span></div>
-	<button type="button" id="btnPage">목록으로 </button>
 
 <script>
 	btnPage.addEventListener("click",goPage);
