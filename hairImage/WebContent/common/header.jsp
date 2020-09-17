@@ -31,9 +31,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.jsp">HOME</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<%=application.getContextPath()%>/category/categoryInsert.do">HAIRUPLOAD</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<%=application.getContextPath()%>/category/categoryHairViewServ.do">HAIRCollection</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#music">music</a></li>
                 </ul>
             </div>
         </nav>
